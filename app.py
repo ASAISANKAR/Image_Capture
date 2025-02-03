@@ -5,7 +5,7 @@ from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql://root:admin@localhost:3306/camera_app'
+app.config['SQLALCHEMY_DATABASE_URI'] =  'mysql://kluiot:adminadmin@kluiot.mysql.pythonanywhere-services.com/kluiot$default'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
