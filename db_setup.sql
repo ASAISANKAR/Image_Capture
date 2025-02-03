@@ -1,0 +1,8 @@
+CREATE DATABASE camera_app;
+USE camera_app;
+
+CREATE TABLE images (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    image_path VARCHAR(255) NOT NULL,
+    timestamp DATETIME DEFAULT CURRENT_TIMESTAMP
+);
