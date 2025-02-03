@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Camera Image Capture</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; }
+        .image-container { display: flex; flex-wrap: wrap; justify-content: center; }
+        .image-card { margin: 10px; text-align: center; }
+        img { width: 200px; height: auto; border-radius: 10px; box-shadow: 2px 2px 5px gray; }
+    </style>
+</head>
+<body>
+    <h1>Camera Image Capture</h1>
+    <form action="/capture" method="post">
+        <button type="submit">Capture Image</button>
+    </form>
+    <h2>Captured Images</h2>
+    <div class="image-container">
+        {% for img in images %}
+        <div class="image-card">
+            <img src="{{ img.image_path }}" alt="Captured Image">
+            <p>{{ img.timestamp }}</p>
+        </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
